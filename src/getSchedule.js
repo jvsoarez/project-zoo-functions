@@ -55,9 +55,7 @@ const getScheduleWithUnexpectedParam = (scheduleTarget) => {
 // Função que quando chamada sem parâmetro, retorna a função scheduleOfAllAnimalsAndAllDays. Caso contrário, retorna
 // a função getScheduleWithUnexpectedParam.
 
-function getSchedule(scheduleTarget) {
-  if (!scheduleTarget) return scheduleOfAllAnimalsAndAllDays();
-  return getScheduleWithUnexpectedParam(scheduleTarget);
-}
+const getSchedule = (scheduleTarget) => (scheduleTarget === undefined
+  ? scheduleOfAllAnimalsAndAllDays() : getScheduleWithUnexpectedParam(scheduleTarget));
 
 module.exports = getSchedule;

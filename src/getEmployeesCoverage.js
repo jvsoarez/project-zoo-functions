@@ -72,9 +72,7 @@ const getAEmployeeCoverageByName = (objectEmployee) => {
   return getAEmployeeCoverageById(objectEmployee);
 };
 
-function getEmployeesCoverage(objectEmployee) {
-  if (objectEmployee === undefined) return coverageOfAllEmployees();
-  return getAEmployeeCoverageByName(objectEmployee);
-}
+const getEmployeesCoverage = (objectEmployee) => (objectEmployee === undefined
+  ? coverageOfAllEmployees() : getAEmployeeCoverageByName(objectEmployee));
 
 module.exports = getEmployeesCoverage;

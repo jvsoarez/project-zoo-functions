@@ -1,6 +1,6 @@
 const { species } = require('../data/zoo_data');
 
-function countAnimals(animal) {
+const countAnimals = (animal) => {
   if (!animal) {
     return species.reduce((count, specie) => {
       const obj = count;
@@ -14,6 +14,6 @@ function countAnimals(animal) {
     return residentsBySex.length;
   }
   return findSpecie.residents.length;
-}
+};
 
 module.exports = countAnimals;

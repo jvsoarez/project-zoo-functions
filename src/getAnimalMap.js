@@ -101,9 +101,7 @@ const conditionBySex = (objOptions) => {
 // Função principal que retorna o objeto com a localização e o array de animais que se encontram na localização (função locationOfAnimals),
 // caso não houver parâmetro. Caso houver, retorna a função conditionsNoParamOrSex;
 
-function getAnimalMap(options) {
-  if (!options) return locationOfAnimals();
-  return conditionBySex(options);
-}
+const getAnimalMap = (options) => (options === undefined ? locationOfAnimals()
+  : conditionBySex(options));
 
 module.exports = getAnimalMap;
